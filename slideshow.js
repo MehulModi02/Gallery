@@ -1,31 +1,34 @@
 //Setting Up Slides
 const slides = Array.from(document.querySelectorAll('.Welcome'));
-for (const slide of slides) {
-  let currentSlide = slides.indexOf(slide)
 
-  //Adding Transition 
-  slide.style.transition = 'all 1s ease-in-out' ;
-
-   //Applying Background
-   slide.style.background = `url(${cities[currentSlide].src}) `;
-   slide.style.backgroundSize = '100% 100%'
-
-   //Adding Letter
-   let currentCity = cities[currentSlide].name;
-   let capitalLetter = document.querySelectorAll('.letter')[currentSlide];
-   capitalLetter.innerText = currentCity[0];
-   capitalLetter.style.background = `url(${cities[currentSlide].src})`;
-   capitalLetter.style.backgroundSize = '100% 100%'
-   capitalLetter.style.webkitBackgroundClip = 'text';
-
-   //Adding City Name
-   for (const letter of currentCity) {
-   const newLetter = document.createElement('p');
-    newLetter.innerText = letter;
-    slide.children[0].children[0].appendChild(newLetter);
-  }
+  for (const slide of slides) {
+    let currentSlide = slides.indexOf(slide)
   
-}
+    //Adding Transition 
+    slide.style.transition = 'all 1s ease-in-out' ;
+  
+     //Applying Background
+     slide.style.background = `url(${cities[currentSlide].src}) `;
+     slide.style.backgroundSize = '100% 100%'
+  
+     //Adding Letter
+     let currentCity = cities[currentSlide].name;
+     let capitalLetter = document.querySelectorAll('.letter')[currentSlide];
+     capitalLetter.innerText = currentCity[0];
+     capitalLetter.style.background = `url(${cities[currentSlide].src})`;
+     capitalLetter.style.backgroundSize = '100% 100%'
+     capitalLetter.style.webkitBackgroundClip = 'text';
+  
+     //Adding City Name
+     for (const letter of currentCity) {
+     const newLetter = document.createElement('p');
+      newLetter.innerText = letter;
+      slide.children[0].children[0].appendChild(newLetter);
+    }
+    
+  }
+
+
 
 
 //Change in Slide
